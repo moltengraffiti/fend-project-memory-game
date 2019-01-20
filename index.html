@@ -1,14 +1,38 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Matching Game</title>
     <meta name="description" content="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="css/app.css">
 </head>
+
 <body>
+
+        <div id='winModal' class='modal'>
+                <div class="modal-dialog">
+                        <div class="modal-content">
+                    <div class='modal-header'>
+                        <h1 class='modal-title'>You Won!</h1>
+                        <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                    </div>
+                    <div class='modal-body'>
+                        <span class='modalTime'>Total Time:</span>
+                        <span class='modalMoves'>Total Moves:</span>
+                        <span class='modalRating'>Player Rating:</span>
+                    </div>
+                    <div class=modal-footer>
+                        <button type='button' class='btn btn-primary modal-replay'>Play Again</button>
+                        <button type='button' class='btn btn-secondary modal-exit' data-dismiss='modal'>Exit Game</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
 
     <div class="container">
         <header>
@@ -16,17 +40,25 @@
         </header>
 
         <section class="score-panel">
-        	<ul class="stars">
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        	</ul>
 
-        	<span class="moves">3</span> Moves
+            <ul class="stars">
+                Player Rating:
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+
+            Moves: <span class="moves">0</span>
+
+            <div class="timer">
+                Timer: <span class="time">0:00</span>               
+            </div>
 
             <div class="restart">
-        		<i class="fa fa-repeat"></i>
-        	</div>
+                <i class="fa fa-repeat"></i>
+            </div>
         </section>
 
         <ul class="deck">
@@ -36,7 +68,7 @@
             <li class="card">
                 <i class="fa fa-paper-plane-o"></i>
             </li>
-            <li class="card match">
+            <li class="card">
                 <i class="fa fa-anchor"></i>
             </li>
             <li class="card">
@@ -45,7 +77,7 @@
             <li class="card">
                 <i class="fa fa-cube"></i>
             </li>
-            <li class="card match">
+            <li class="card">
                 <i class="fa fa-anchor"></i>
             </li>
             <li class="card">
@@ -66,7 +98,7 @@
             <li class="card">
                 <i class="fa fa-bomb"></i>
             </li>
-            <li class="card open show">
+            <li class="card">
                 <i class="fa fa-bolt"></i>
             </li>
             <li class="card">
@@ -83,4 +115,7 @@
 
     <script src="js/app.js"></script>
 </body>
+
+
+
 </html>
